@@ -1,0 +1,21 @@
+{
+  "name": "electron-request-review",
+  "version": "1.0.0",
+  "main": "index.js",
+  "typings": "index.d.ts",
+  "dependencies": {
+    "bindings": "1.5.0",
+    "nan": "2.14.0"
+  },
+  "scripts": {
+    "rebuild": "node-gyp rebuild --target=8.3.1 --arch=x64 --dist-url=https://atom.io/download/atom-shell",
+    "test": "node index.js",
+    "install": "node-gyp rebuild",
+    "configure": "node-gyp configure",
+    "example": "cd example && npm start"
+  },
+  "gypfile": true,
+  "devDependencies": {
+    "@types/node": "10.14.18"
+  }
+}
