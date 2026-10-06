@@ -1,4 +1,1 @@
-#include <nan.h>
-
-void requestReview(const Nan::FunctionCallbackInfo<v8::Value> &info) { }
-
+extern "C" int taskio_request_review() { return 0; }
