@@ -3,7 +3,7 @@
     {
       "target_name": "addon",
       "sources": ["src/index.cc"],
-      "defines": ["NAPI_VERSION=8"],
+      "defines": ["NAPI_VERSION=6"],
       "conditions": [
         ["OS=='mac'", {
           "actions": [{

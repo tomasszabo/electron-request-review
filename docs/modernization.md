@@ -1,7 +1,7 @@
 # Electron 44 and modern macOS review bridge
 
 This branch preserves `requestReview(): void` while replacing NAN/direct V8
-access with Node-API version 8 and the deprecated Objective-C StoreKit API with
+access with Node-API version 6 and the deprecated Objective-C StoreKit API with
 Swift `AppStore.requestReview(in:)`.
 
 ## Requirements
@@ -9,6 +9,9 @@ Swift `AppStore.requestReview(in:)`.
 - macOS 13 or later at runtime; native Electron main-process use only.
 - Xcode with Swift 6 and macOS SDK support to build the Swift bridge.
 - Node 24.21.0 for this repository's development/build tools (`.nvmrc`).
+- Consumers on Node 12.18+ can use npm's native build tooling. The bridge uses
+  Node-API 6 so Taskio's temporary Electron 11 checkpoint remains loadable while
+  the runtime upgrade is prepared; Electron 11 is not a supported release target.
 - Windows/Linux retain the historical no-op; their native builds must be tested
   on those platforms. No Windows review implementation is introduced.
 

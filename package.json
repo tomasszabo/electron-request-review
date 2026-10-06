@@ -17,11 +17,10 @@
   "gypfile": true,
   "devDependencies": {
     "@electron/rebuild": "4.2.0",
-    "electron": "44.4.5",
-    "node-gyp": "13.0.2"
+    "electron": "44.4.5"
   },
   "engines": {
-    "node": ">=22.12.0"
+    "node": ">=12.18.0"
   },
   "files": ["index.js", "index.d.ts", "binding.gyp", "src", "scripts/build-swift.cjs", "docs"]
 }

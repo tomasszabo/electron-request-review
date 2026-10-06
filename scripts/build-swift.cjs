@@ -1,8 +1,8 @@
 'use strict';
 
-const path = require('node:path');
-const fs = require('node:fs');
-const { execFileSync } = require('node:child_process');
+const path = require('path');
+const fs = require('fs');
+const { execFileSync } = require('child_process');
 
 const [arch, output] = process.argv.slice(2);
 const target = { x64: 'x86_64', arm64: 'arm64' }[arch];
